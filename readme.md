@@ -1,0 +1,1 @@
+This is a quiz app made to check your knowledge about cricket.
