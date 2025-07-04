@@ -82,7 +82,7 @@ do {
     console.log(colors.magenta(question.question));
     console.log(colors.blue(question.optionOne));
     console.log(colors.blue(question.optionTwo));
-    console.log(colors.blue(question.optionThree);)
+    console.log(colors.blue(question.optionThree));
     console.log(colors.blue(question.optionFour));
     verifyAnswer();
   }
