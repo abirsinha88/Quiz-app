@@ -1,7 +1,7 @@
 const readlineSync = require('readline-sync');
 const colors = require('colors');
-var highScore = 0
-var highScorer
+var highScore = 0;
+var highScorer;
  const questions = [{
   question: "1>Who won the first ever Cricket World Cup in 1975 ? \n",
   optionOne: 'a>Australia',
@@ -74,68 +74,68 @@ var highScorer
   rightAnswer: 'b'
 }];
 do {
-  var userName
-  var score = 0
+  var userName;
+  var score = 0;
 
-  greeting()
+  greeting();
   for (var question of questions) {
-    console.log(colors.magenta(question.question))
-    console.log(colors.blue(question.optionOne))
-    console.log(colors.blue(question.optionTwo))
-    console.log(colors.blue(question.optionThree))
-    console.log(colors.blue(question.optionFour))
-    verifyAnswer()
+    console.log(colors.magenta(question.question));
+    console.log(colors.blue(question.optionOne));
+    console.log(colors.blue(question.optionTwo));
+    console.log(colors.blue(question.optionThree);)
+    console.log(colors.blue(question.optionFour));
+    verifyAnswer();
   }
-  displayScore()
+  displayScore();
 
 
 } while (playAgain() === 0)
 function greeting() {
-  userName = readlineSync.question(colors.bgBlue.black('Enter your name please : '))
-  var greetingMessage = '\nwelcome ' + userName + '!\n'
-  console.log(colors.cyan(greetingMessage))
-  console.log(colors.bgBlack.green("Let's take a Quiz\n"))
+  userName = readlineSync.question(colors.bgBlue.black('Enter your name please : '));
+  var greetingMessage = '\nwelcome ' + userName + '!\n';
+  console.log(colors.cyan(greetingMessage));
+  console.log(colors.bgBlack.green("Let's take a Quiz\n"));
 }
 function inputAnswer() {
-  var response = readlineSync.question(colors.grey('Enter your response : '))
-  return response
+  var response = readlineSync.question(colors.grey('Enter your response : '));
+  return response;
 }
 function verifyAnswer() {
-  var check = inputAnswer()
+  var check = inputAnswer();
   if (check === question.rightAnswer) {
-    console.log(colors.green('\nCorrect answer!\n'))
-    score = score + 10
+    console.log(colors.green('\nCorrect answer!\n'));
+    score = score + 10;
   }
   else {
-    console.log(colors.red('\nWrong answer!\n'))
+    console.log(colors.red('\nWrong answer!\n'));
   }
 }
 function displayScore() {
-  console.log(colors.yellow('your score is ', score))
+  console.log(colors.yellow('your score is ', score));
   if (score > highScore) {
-    highScore = score
-    highScorer = userName
+    highScore = score;
+    highScorer = userName;
     console.log(colors.red("\nnew high score is ", highScore +
-      '  player name : ', highScorer))
+      '  player name : ', highScorer));
   }
   else if (score < highScore) {
-    console.log(colors.gray('\nHigh Score is', highScore + '    player name : ', highScorer))
+    console.log(colors.gray('\nHigh Score is', highScore + '    player name : ', highScorer));
   }
   else {
-    console.log(colors.yellow('\nScore Tie '))
+    console.log(colors.yellow('\nScore Tie '));
   }
-  console.log('\n')
+  console.log('\n');
 
 }
 function playAgain() {
-  var resume
-  var startagain = readlineSync.question(colors.bgBlue.white('\nDo you want to play again? yes/no :\n'))
+  var resume;
+  var startagain = readlineSync.question(colors.bgBlue.white('\nDo you want to play again? yes/no :\n'));
   if (startagain == 'yes') {
-    resume = 0
+    resume = 0;
   }
   else {
-    resume = 1
+    resume = 1;
   }
-  return resume
+  return resume;
 }
 
