@@ -102,7 +102,7 @@ function inputAnswer() {
 }
 function verifyAnswer() {
   var check = inputAnswer()
-  if (check === questions[i].rightAnswer) {
+  if (check === question.rightAnswer) {
     console.log(colors.green('\nCorrect answer!\n'))
     score = score + 10
   }
