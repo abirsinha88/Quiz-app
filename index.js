@@ -78,12 +78,12 @@ do {
   var score = 0
 
   greeting()
-  for (var i = 0; i < questions.length; i++) {
-    console.log(colors.magenta(questions[i].question))
-    console.log(colors.blue(questions[i].optionOne))
-    console.log(colors.blue(questions[i].optionTwo))
-    console.log(colors.blue(questions[i].optionThree))
-    console.log(colors.blue(questions[i].optionFour))
+  for (var question of questions) {
+    console.log(colors.magenta(question.question))
+    console.log(colors.blue(question.optionOne))
+    console.log(colors.blue(question.optionTwo))
+    console.log(colors.blue(question.optionThree))
+    console.log(colors.blue(question.optionFour))
     verifyAnswer()
   }
   displayScore()
